@@ -25,9 +25,14 @@ public class Exercise5 {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Input number: ");
-                    int number = scanner.nextInt();
-                    addToList(list, number);
+                    System.out.println("Input the quantity of numbers that you need to input: ");
+                    int quantity = scanner.nextInt();
+                    while(quantity > 0) {
+                        System.out.print("Input number: ");
+                        int number = scanner.nextInt();
+                        addToList(list, number);
+                        quantity--;
+                    }
                     break;
                 case 2:
                     printNumbers(list);
